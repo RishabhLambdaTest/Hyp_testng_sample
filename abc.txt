@@ -1,0 +1,3 @@
+LT_USERNAME=rishabhsinghlambdatest
+LT_ACCESS_KEY=MtmThl1OkRKinMaMQ9qg9BZ2xgf8NhK0G30HMJ7VCudgcFvNt9
+url=hola_amigo
