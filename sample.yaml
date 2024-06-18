@@ -78,4 +78,4 @@ framework:
 #     ref: main
 #     verifySSL: true
 
-jobLabel: [linux]
+jobLabel: [linux,${build_id}]
