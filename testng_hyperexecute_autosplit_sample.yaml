@@ -51,4 +51,4 @@ partialReports:
   frameworkName: extent
 
 
-jobLabel: ['Jenkins Build : ${build_id}']
+jobLabel: ['Jenkins Build : ${BUILD_ID}']
