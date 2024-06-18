@@ -12,13 +12,7 @@ retryOnFailure: true
 maxRetries: 1
 concurrency: 4
 
-# env:
-#   # PAT: ${{ .secrets.testKey }}
-#   CACHE_DIR: m2_cache_dir
 
-# cacheKey: '{{ checksum "pom.xml" }}'
-# cacheDirectories:
-#   - .m2
 
 pre:
   - echo accessToken
@@ -31,51 +25,15 @@ testDiscovery:
   shell: bash
   command: 
   # mode: static
-  # command: grep -nri 'Feature' features -ir --include=\*.feature | sed 's/:.*//'
+  command: grep -nri 'Feature' features -ir --include=\*.feature | sed 's/:.*//'
   # command: snooper --targetOs=win --featureFilePaths=features/  --frameWork=java --specificTags=@rish 
 
-#   # - echo ${{ .secrets.url }}
-#   # Skip execution of the tests in the pre step
-#   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 
-# post:
-#   - ls target/surefire-reports/
-
-# mergeArtifacts: true
-
-
-# uploadArtefacts:
-#  - name: ExecutionSnapshots
-#    path:
-#     - target/surefire-reports/html/**
-
-# report: true
-# partialReports:
-#   location: target/surefire-reports/html
-#   type: html
-#   frameworkName: extent
-
-framework:
-  name: maven/testng
-  defaultReports: false
-  flags:
-    - "-Dplatname=win"
-    - "--file=pom02.xml"
-
-
-# sourcePayload:
-#     accessToken: sjoudn5u67zx7cio4l4onyn4nsrbw6z55qjmnn5jme3wripk7p7a
-#     link: https://dev.azure.com/standardbank/Salesforce-Practice/_git/SF_SBG_InternalTestAutomation
-#     platform: git
-#     ref: EmployeeBenefits
-#     verifySSL: true
-
-
-# sourcePayload:
-#     accessToken:accessToken: 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
-#     link: https://github.com/RishabhLambdaTest/testng-selenium-hyperexecute-sample
-#     platform: git
-#     ref: main
-#     verifySSL: true
+# framework:
+#   name: maven/testng
+#   defaultReports: false
+#   flags:
+#     - "-Dplatname=win"
+#     - "--file=pom02.xml"
 
 jobLabel: [linux,${build_id}]
