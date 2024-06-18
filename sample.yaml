@@ -29,11 +29,11 @@ testDiscovery:
   # command: snooper --targetOs=win --featureFilePaths=features/  --frameWork=java --specificTags=@rish 
 
 
-framework:
-  name: maven/testng
-  defaultReports: false
-  flags:
-    - "-Dplatname=win"
-    - "--file=pom02.xml"
+# framework:
+#   name: maven/testng
+#   defaultReports: false
+#   flags:
+#     - "-Dplatname=win"
+#     - "--file=pom02.xml"
 
 jobLabel: [linux,${build_id}]
